@@ -1,5 +1,5 @@
 # SMA Bluetooth Inverter Monitoring
-Python and lua code in order to monitor my SMA 4000TL Photovoltaic Inverter. Python code based on https://github.com/stuartpittaway/smasolarbluetoothdebugtool. The code runs on a DLINK DIR 505 (mips_24kc) with OpenWrt 19.07.4 (see https://github.com/hatziliontos/Openwrt-Bluetooth-C-Header-Files), r11208-ce6496d796 with a 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode). 
+Python and lua code in order to monitor my SMA 4000TL Photovoltaic Inverter. Python code based on https://github.com/stuartpittaway/smasolarbluetoothdebugtool. The code runs on a DLINK DIR 505 (mips_24kc) with OpenWrt 19.07.4 (see https://github.com/hatziliontos/Openwrt-Bluetooth-C-Header-Files), r11208-ce6496d796 with a 0a12:0001 Cambridge Silicon Radio, Ltd Bluetooth Dongle (HCI mode). A sample output by executing python code is given below. Tests showed 14-17 seconds execution time (obviously because of small system capabilities).
 ```
 date; python2 SMA_Bluetooth_Inverter_Monitoring_p27.py; date
 Fri Dec 25 09:08:44 EET 2020
@@ -744,4 +744,31 @@ None
 
 DailyYield
 Fri Dec 25 09:08:58 EET 2020
+```
+The lua code prints a summary of results:
+```
+date;lua SMA_Bluetooth_Inverter_Monitoring_p27.lua; date
+Fri Dec 25 09:16:49 EET 2020
+hci0 is up
+Inverter_Temperature1=21.26
+Inverter_Temperature2=21.47
+Inverter_Temperature3=21.38
+Inverter_Temperature4=21.38
+Daily_Yield=0.295
+Total_Yield1=43980.381
+Total_Yield2=2499.073
+Total_Yield3=0.295
+Hz=50.02
+SpotAC=0.232
+SpotDCA1=0.444
+SpotDCA2=0.489
+SpotDCV1=275.59
+SpotDCV2=266.46
+SpotDCW1=0.122
+SpotDCW2=0.13
+SpotDCW=0.252
+SpotACA1=1.01
+SpotACV1=229.97
+SpotACW1=0.232
+Fri Dec 25 09:17:05 EET 2020
 ```
