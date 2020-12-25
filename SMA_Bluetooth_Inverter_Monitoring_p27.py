@@ -1,13 +1,5 @@
 #!/opt/bin/python2.7
 
-# Run this script like this...
-# python SMASolarInverterPacketDebug.py 00:80:25:1D:AC:53 0000
-
-# More useful background reading on here (Alan)
-# https://groups.google.com/forum/#!topic/sma-bluetooth/UP4Tp8Ob3OA
-
-#christodoulo inverter password is Ggol1234 (02-07-2020)
-
 import bluetooth
 import array
 import math
@@ -775,6 +767,6 @@ def main(bd_addr,InverterPassword):
 
             btSocket.close()
 
-main("00:80:25:25:37:b6","Ggol1234")
+main("inverter mac address in the form of XX:XX:XX:XX:XX:XX","your password")
 
 exit()
